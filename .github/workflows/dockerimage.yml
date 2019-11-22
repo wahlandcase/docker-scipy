@@ -11,11 +11,12 @@ jobs:
         with:
           fetch-depth: 1
 
-      - name: Build & Push to Docker Hub
-        uses: opspresso/action-docker@master
-        env:
-          USERNAME: ${{ secrets.DOCKER_USERNAME }}
-          PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
-          IMAGE_NAME: "giffel/scipy"
-          TAG_NAME: "${GITHUB_SHA}"
-          LATEST: "true"
+      - name: Publish Docker
+        uses: elgohr/Publish-Docker-Github-Action@2.8
+        with:
+          # The name of the image you would like to push
+          name: "giffel/scipy"
+          # The login username for the registry
+          username: ${{ secrets.DOCKER_USERNAME }}
+          # The login password for the registry
+          password: ${{ secrets.DOCKER_PASSWORD }}

@@ -13,6 +13,8 @@ RUN apk --update add --virtual scipy-runtime gcc musl-dev \
     && pip3 install --no-cache-dir scipy==1.3.1 \
     && pip3 install --no-cache-dir cython \
     && pip3 install --no-cache-dir pyzmq==18.1.0 \
+    && pip3 install --no-cache-dir pandas==0.25.1 \
+    && pip3 install --no-cache-dir scikit-learn==0.21.3 \
     && apk add --virtual scipy-runtime3 \
         freetype libgfortran libgcc libpng tiff openjpeg libpng libstdc++ musl openblas tcl tk \
     && rm -rf /var/cache/apk/*

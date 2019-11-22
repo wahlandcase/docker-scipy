@@ -17,4 +17,5 @@ jobs:
           USERNAME: ${{ secrets.DOCKER_USERNAME }}
           PASSWORD: ${{ secrets.DOCKER_PASSWORD }}
           IMAGE_NAME: "giffel/scipy"
+          TAG_NAME: ${{ GITHUB_SHA }}
           LATEST: "true"

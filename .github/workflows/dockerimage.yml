@@ -28,4 +28,3 @@ jobs:
           push: true
           tags: |
             giffel/scipy:latest
-            giffel/scipy:${{ steps.date.outputs.date }}

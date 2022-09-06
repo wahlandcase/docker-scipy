@@ -15,7 +15,8 @@ RUN apk --update add --virtual scipy-runtime gcc musl-dev \
     && pip3 install --no-cache-dir pyzmq==18.1.0 \
     && pip3 install --no-cache-dir pandas==0.25.1 \
     && pip3 install --no-cache-dir scikit-learn==0.21.3 \
-    && pip3 install --no-cache-dir opentelemetry-exporter-otlp-proto-grpc>=1.12.0, <2.0 \
+    && pip3 install --no-cache-dir "grpcio>=1.0,<2.0" \
+    && pip3 install --no-cache-dir "redislite>=6.2.805324,<7.0" \
     && apk add --virtual scipy-runtime3 \
         freetype libgfortran libgcc libstdc++ musl openblas tcl tk \
     && rm -rf /var/cache/apk/*

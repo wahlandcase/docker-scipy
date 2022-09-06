@@ -16,7 +16,6 @@ jobs:
         with:
           # The name of the image you would like to push
           name: "giffel/scipy"
-          # The login username for the registry
           username: ${{ secrets.DOCKER_USERNAME }}
-          # The login password for the registry
           password: ${{ secrets.DOCKER_PASSWORD }}
+          tags: "latest,another"
